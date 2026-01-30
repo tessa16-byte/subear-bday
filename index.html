@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Subear 🧸</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Floating hearts layer -->
+  <div class="hearts-layer" aria-hidden="true"></div>
+
+  <!-- Confetti canvas -->
+  <canvas id="confettiCanvas" aria-hidden="true"></canvas>
+
+  <!-- Music button -->
+  <button class="music-btn" id="musicBtn" type="button" aria-label="Play music" title="Play music">
+    ▶︎
+  </button>
+
+  <!-- Background music -->
+  <!-- IMPORTANT: using your exact file name -->
+  <audio id="bgMusic" preload="auto" loop>
+    <source src="Blue.mp3" type="audio/mpeg" />
+  </audio>
+
+  <main class="wrap">
+
+    <!-- SCREEN 1: HOME -->
+    <section class="panel active" id="screenHome">
+      <div class="glass-card">
+        <div class="tiny-date">31.01.2026</div>
+
+        <h1 class="title">HAPPY BIRTHDAY</h1>
+        <p class="sub">A LITTLE MESSAGE FOR YOU ♡</p>
+
+        <button class="cake-btn" id="openLetterBtn" type="button">
+          <div class="cake-emoji">🎂</div>
+          <div class="cake-text">
+            <div class="cake-title">CLICK THE CAKE</div>
+            <div class="cake-hint">(clickable to open the letter)</div>
+          </div>
+        </button>
+      </div>
+    </section>
+
+    <!-- SCREEN 2: LETTER -->
+    <section class="panel" id="screenLetter">
+      <div class="glass-card letter-card">
+        <div class="tiny-date">31.01.2026</div>
+
+        <!-- Typing animation title -->
+        <h2 id="typedTitle" class="typed-title" data-text="A Letter for 🧸"></h2>
+
+        <div class="letter-box">
+          <p><strong>Dear Subear 🐻,</strong></p>
+
+          <p>Happy birthday, Bearbear!</p>
+          <p>Another year older and wiser.</p>
+
+          <p>
+            I hope today feels calm, warm, and full of little moments that make you smile.
+            Thank you for being you — for your kindness, your patience, and the way you make everything feel lighter.
+          </p>
+
+          <p>
+            Meeting you during my heartbreak was unexpected, but I’m really grateful it happened.
+            We went through similar pain, and because of that, you became someone who truly understands me.
+          </p>
+
+          <p>
+            I’m wishing you nothing but the best. You deserve happiness that doesn’t hurt —
+            and a love that feels safe again.
+          </p>
+
+          <p>
+            I’m always proud of you. May this year bring you peace, progress, and healing.
+            I’ll always be cheering for you — today and every day.
+          </p>
+
+          <p style="margin-top: 18px;">
+            Love you,<br />
+            <strong>— Matcha</strong>
+          </p>
+        </div>
+
+        <div class="row">
+          <button class="btn ghost" id="backToHomeBtn" type="button">← Back</button>
+          <button class="btn primary" id="nextToQuestionBtn" type="button">Next →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCREEN 3: QUESTION -->
+    <section class="panel" id="screenQuestion">
+      <div class="glass-card question-card">
+        <div class="tiny-date">31.01.2026</div>
+
+        <h2 class="q-title">One more question… 💙</h2>
+
+        <div class="q-box">
+          <div class="q-main">Can I take you out for your birthday? 🥺</div>
+          <div class="q-small">TICK ONE BOX</div>
+
+          <div class="choice-row">
+            <label class="choice">
+              <input type="checkbox" id="yesOption" />
+              <span>YES</span>
+            </label>
+
+            <label class="choice">
+              <input type="checkbox" id="noOption" />
+              <span>NO</span>
+            </label>
+          </div>
+
+          <div class="status" id="choiceStatus">No choice yet.</div>
+        </div>
+
+        <div class="row">
+          <button class="btn ghost" id="backToLetterBtn" type="button">← Back</button>
+          <button class="btn primary" id="finishBtn" type="button">Finish</button>
+        </div>
+
+        <div class="footer-note">Made in blue for you 💙</div>
+      </div>
+    </section>
+
+    <!-- SCREEN 4: END -->
+    <section class="panel" id="screenEnd">
+      <div class="glass-card end-card">
+        <div class="tiny-date">31.01.2026</div>
+
+        <h2 class="end-title">Thank you for reading 💙</h2>
+        <p class="end-text">Screenshot your answer and send it to me 😌</p>
+
+        <button class="btn ghost" id="restartBtn" type="button">Restart</button>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
